@@ -1,14 +1,15 @@
-package larges;
+package largest.v2;
 
 import java.util.Set;
 
-public class Person2 {
+public class Person {
+    //Code W4-4
     String name;
     int age;
-    Set<Person> friends;
+    Set<largest.Person> friends;
     Address address;
 
-    public Person2(String name, int age, String addressLine1, String addressLine2, String city, String state, String zipCode) {
+    public Person(String name, int age, String addressLine1, String addressLine2, String city, String state, String zipCode) {
 
     }
 
@@ -24,7 +25,7 @@ public class Person2 {
 
     }
 
-    public void addFriend(Person p) {
+    public void addFriend(largest.Person p) {
         friends.add(p);
     }
 }
