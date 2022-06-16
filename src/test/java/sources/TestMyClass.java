@@ -22,6 +22,7 @@ public class TestMyClass {
         calculator.put(0, new Result());
         calculator.put(1, new Result());
         calculator.put(2, new Result());
+        calculator.put(3, new Result());
         Result result = calculator.doCalculation(3);
         assertEquals(result, calculator.get(3));
     }

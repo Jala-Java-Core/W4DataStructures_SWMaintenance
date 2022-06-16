@@ -186,9 +186,9 @@ public class MainClass {
     //Code W4-11
     public static int myMethod(int x) {
         boolean slow = slow();
-        boolean fast = fast();
+        boolean fast = fast();//unnecessary waste of resources
 
-        if (slow || fast) { //Evaluate both if first is false
+        if (slow || fast) { //Evaluated both
             x++;
         }
         if (unlikely() || likely()) { //Evaluate both if first is false

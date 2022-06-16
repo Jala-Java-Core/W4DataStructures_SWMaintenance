@@ -1,13 +1,16 @@
 package sources;
 
-public class DataProcessor2 {
+public class DataProcessorV2 {
     //Code W4-10
 
     protected DataSource dataSource;
 
     public String myMethod(String arg) {
         //..
-        if  (dataSource == null) {
+        if (arg == null) {
+            return null;
+        }
+        if (dataSource == null) {
             dataSource = new DataSource();
         }
         Result r = dataSource.query(arg);

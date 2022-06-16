@@ -19,6 +19,9 @@ public class MyClass<Input> {
 
     public Result doCalculation(Input input) {
         //memoization
+        if (input == null) {
+            return null;
+        }
         if (results.containsKey(input)) {
             return results.get(input);
         } else {

@@ -1,13 +1,12 @@
 package sources;
 
-import banks.BankAccount;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestDataProcessor2 {
+public class TestDataProcessorV2 {
 
     @Before
     public void setup() {
@@ -19,7 +18,7 @@ public class TestDataProcessor2 {
 
     @Test
     public void testMyMethod() {
-        DataProcessor2 dataProcessor = new DataProcessor2();
+        DataProcessorV2 dataProcessor = new DataProcessorV2();
         String result = dataProcessor.myMethod("select * from sources");
         assertEquals("", result);
     }
