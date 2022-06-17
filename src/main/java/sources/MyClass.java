@@ -31,7 +31,7 @@ public class MyClass<Input> {
         }
     }
     private Result calculateResult(Input input) {
-        Result res = new Result();
+        Result res = new Result(input);
         /*put(input, res);
         return doCalculation(input);*/
         return res;

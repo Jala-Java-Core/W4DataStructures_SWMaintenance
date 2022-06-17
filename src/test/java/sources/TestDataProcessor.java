@@ -21,6 +21,6 @@ public class TestDataProcessor {
     public void testMyMethod() {
         DataProcessor dataProcessor = new DataProcessor();
         String result = dataProcessor.myMethod("select * from sources");
-        assertEquals("", result);
+        assertEquals("0", result);
     }
 }

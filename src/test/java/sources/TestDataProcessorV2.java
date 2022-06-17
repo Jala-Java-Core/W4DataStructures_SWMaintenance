@@ -20,6 +20,6 @@ public class TestDataProcessorV2 {
     public void testMyMethod() {
         DataProcessorV2 dataProcessor = new DataProcessorV2();
         String result = dataProcessor.myMethod("select * from sources");
-        assertEquals("", result);
+        assertEquals("0", result);
     }
 }
