@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestImplement {
+public class TestBankAccount {
     int NUM_THREADS = 1;
 
     @Before
@@ -21,9 +21,10 @@ public class TestImplement {
     public void clean() {
 
     }
-    //code W4-15
+
+    //Code W4-15
     @Test
-    public void test() throws InterruptedException {
+    public void test() {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         final Implement implement = new Implement();
         for (int i = 0; i < NUM_THREADS;  i++) {

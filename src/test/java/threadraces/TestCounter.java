@@ -20,7 +20,7 @@ public class TestCounter {
     public void after() {
 
     }
-
+    //Code W4-14
     @Test
     public void test() throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
@@ -31,7 +31,7 @@ public class TestCounter {
                 @Override
                 public void run() {
                     for (int j = 0; j < NUM_ITERATIONS; j++) {
-                        sync.incrementCount1();
+                        //sync.incrementCount1();
                         notSync.incrementCount1();
                     }
                 }
