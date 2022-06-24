@@ -1,3 +1,6 @@
+import menu.example.MainMenu;
+
+import java.io.IOException;
 import java.util.List;
 
 public class MainClass {
@@ -207,8 +210,10 @@ public class MainClass {
         return x;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        MainMenu menu =  new MainMenu();
+        menu.showMainMenu();
 
         //int dda_D4eds31f=0;
         int[] dda_D4eds31f = {};
