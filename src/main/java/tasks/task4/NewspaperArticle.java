@@ -8,39 +8,20 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class NewspaperArticle {
-	private String title;
-	private String author;
+public class NewspaperArticle extends Document {
 	private int startPage;
 	private int endPage;
 	private Set<String> editors;
 	private String newspaper;
-	private Date date;
-	private String city;
-	private String state;
-	private String postCode;
 	
 	public NewspaperArticle(String title, String author, int startPage, int endPage, Set<String> editors, String newspaper, Date date, String city, String state, String postCode) {
-		this.title = title;
-		this.author = author;
+		super(title, author, date, city, state, postCode);
 		this.startPage = startPage;
 		this.endPage = endPage;
 		this.editors = editors;
 		this.newspaper = newspaper;
-		this.date = date;
-		this.city = city;
-		this.state = state;
-		this.postCode  = postCode;
 	}
-	
-	public String getTitle() {
-		return title;
-	}
-	
-	public String getAuthor() {
-		return author;
-	}
-	
+
 	public int getStartPage() {
 		return startPage;
 	}
@@ -57,28 +38,12 @@ public class NewspaperArticle {
 		return newspaper;
 	}
 	
-	public Date getDate() {
-		return date;
-	}
-	
-	public String getCity() {
-		return city;
-	}
-	
-	public String getState() {
-		return state;
-	}
-	
-	public String getPostCode() {
-		return postCode;
-	}
-	
 	public int numPages(){
 		return endPage - startPage + 1;
 	}
 	
 	public boolean sameAuthor(NewspaperArticle article){
-		return this.author.equals(article.author);
+		return this.getAuthor().equals(article.getAuthor());
 	}
 	
 	public boolean sameNewspaper(NewspaperArticle article) {
@@ -100,11 +65,11 @@ public class NewspaperArticle {
 	}
 	
 	public int compareDates(NewspaperArticle article){
-		return this.date.compareTo(article.date);
+		return this.getDate().compareTo(article.getDate());
 	}
 	
 	public int compareWithGeneralDate(Date date){
-		return this.date.compareTo(date);
+		return this.getDate().compareTo(date);
 	}
 	
 }
